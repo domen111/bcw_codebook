@@ -4,7 +4,7 @@
 
 \usepackage{amsthm}								%定義，例題
 \usepackage{amssymb}
-%\usepackage[margin=2cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{fontspec}								%設定字體
 \usepackage{color}
 \usepackage[x11names]{xcolor}
@@ -18,7 +18,7 @@
 \usepackage{amsmath}
 \usepackage{pdfpages}
 %\usepackage[T1]{fontenc}
-\usepackage{amsmath, courier, listings, fancyhdr, graphicx}
+\usepackage{amsmath, courier, listings, fancyhdr, graphicx, tikz}
 \topmargin=0pt
 \headsep=5pt
 \textheight=780pt
@@ -31,6 +31,8 @@
 \oddsidemargin=0pt
 \evensidemargin=0pt
 \hoffset=-42pt
+\def\width{18}
+\def\hauteur{13}
 
 %\renewcommand\listfigurename{圖目錄}
 %\renewcommand\listtablename{表目錄} 
@@ -322,6 +324,14 @@ stringstyle=\itshape\color{Green4},
 
 \subsection{Manhattan MST}
 \lstinputlisting{../codes/Problem/ManhattanMST.cpp}
+
+\section{Graph paper}
+\begin{tikzpicture}[x=1cm, y=2cm, semitransparent]
+% \draw[step=1mm, line width=0.1mm, black!30!white] (0,0) grid (\width,\hauteur);
+\draw[step=5mm, line width=0.2mm, black!20!white] (0,0) grid (\width,\hauteur);
+\draw[step=5cm, line width=0.5mm, black!30!white] (0,0) grid (\width,\hauteur);
+\draw[step=1cm, line width=0.3mm, black!50!white] (0,0) grid (\width,\hauteur);
+\end{tikzpicture}
 
 \clearpage
 
