@@ -15,7 +15,7 @@
 \usepackage{graphicx}								%Graphic
 \usepackage{enumerate}
 \usepackage{titlesec}
-\usepackage{amsmath}
+%\usepackage{amsmath}
 \usepackage{pdfpages}
 %\usepackage[T1]{fontenc}
 \usepackage{amsmath, courier, listings, fancyhdr, graphicx, tikz}
@@ -41,8 +41,8 @@
 
 %\setmainfont{Consolas}				%主要字型
 \setmainfont{Linux Libertine G}
-\setmonofont{Source Code Pro}
-\setCJKmainfont{Source Han Sans TC}			%中文字型
+\setmonofont{Ubuntu Mono}
+\setCJKmainfont{Noto Sans CJK TC}			%中文字型
 %\setmainfont{sourcecodepro}
 \XeTeXlinebreaklocale "zh"						%中文自動換行
 \XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
@@ -184,6 +184,9 @@ stringstyle=\itshape\color{Green4},
 \subsection{Minimum Weight Matching (Clique version)}
 \lstinputlisting{../codes/Graph/Matching/Minimum_General_Weighted_Matching.cpp}
 
+\subsection{General Graph Matching (wangyenjen)}
+\lstinputlisting{../codes/Graph/Matching/general_graph_matching_wangyenjen.cpp}
+
 %\subsection{Maximum Simple Graph Matching (Possibly Wrong)}
 %\lstinputlisting{../codes/Graph/Matching/Maximum_Simple_Graph_Matching.cpp}
 
@@ -224,6 +227,7 @@ stringstyle=\itshape\color{Green4},
 
 \subsection{Algorithms about Primes}
 \lstinputlisting{../codes/Math/primes.cpp}
+\lstinputlisting{../codes/Math/prime.sh}
 
 \subsection{(+1) PolynomialGenerator}
 \lstinputlisting{../codes/Math/PolyGen.cpp}
@@ -253,6 +257,7 @@ stringstyle=\itshape\color{Green4},
 %TODO wrong when intersection is empty
 \subsection{Half Plane Intersection}
 \lstinputlisting{../codes/Geometry/Half_plane_intersection/half_plane_intersection.cpp}
+\lstinputlisting{../codes/Geometry/Half_plane_intersection/half_plane_intersection_wangyenjen.cpp}
 
 %\subsection{Point Class}
 %\lstinputlisting{../codes/Geometry/Point_operators/point_class.cpp}
