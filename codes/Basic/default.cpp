@@ -1,5 +1,3 @@
-#pragma GCC optimize ("O2")
-#pragma GCC target("avx,tune=native")
 #include<bits/stdc++.h>
 
 #define ALL(a) begin(a), end(a)
