@@ -1,5 +1,6 @@
 set rnu nu ai cin ts=4 sw=4 mouse=a
 
-map <F9> <ESC>:w<CR>:!clear && g++ "%" -o "%<" -std=c++11 -Wall -Wextra -Wconversion -Wshadow -O2 && echo success<CR>
+map <F8> <ESC>:w<CR>:!clear && g++ "%" -o "%<" -std=c++11 -Wall -Wextra -Wconversion -Wshadow -O2 -DLITE -fsanitize=address -fsanitize=undefined && echo success<CR>
+map <F9> <ESC>:w<CR>:!clear && g++ "%" -o "%<" -std=c++11 -Wall -Wextra -Wconversion -Wshadow -O2 -DLITE && echo success<CR>
 map <F10> <ESC>:!./"%<"<CR>
 
