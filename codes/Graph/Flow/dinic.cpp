@@ -1,7 +1,7 @@
 struct Dinic{
   static const int MXN = 10000;
   struct Edge{ int v,f,re; };
-  int n,s,t,level[MXN];
+  int n,s,t,level[MXN],idx[MXN];
   vector<Edge> E[MXN];
   void init(int _n, int _s, int _t){
     n = _n; s = _s; t = _t;
@@ -12,7 +12,8 @@ struct Dinic{
     E[v].PB({u,0,SZ(E[u])-1});
   }
   bool BFS(){
-    for (int i=0; i<n; i++) level[i] = -1;
+    fill_n(level,n,-1);
+    fill_n(idx,n,0);
     queue<int> que;
     que.push(s);
     level[s] = 0;
@@ -30,7 +31,8 @@ struct Dinic{
   int DFS(int u, int nf){
     if (u == t) return nf;
     int res = 0;
-    for (auto &it : E[u]){
+    for (int & i = idx[u]; i < SZ(E[u]); ++i) {
+      auto &it = E[u][i];
       if (it.f > 0 && level[it.v] == level[u]+1){
         int tf = DFS(it.v, min(nf,it.f));
         res += tf; nf -= tf; it.f -= tf;
