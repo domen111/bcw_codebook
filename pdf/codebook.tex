@@ -75,6 +75,13 @@ keywordstyle=\bfseries\color{Blue1},
 commentstyle=\itshape\color{Red4},
 stringstyle=\itshape\color{Green4},
 }
+\lstdefinelanguage{vim}{
+  % list of keywords
+  morekeywords={set, let, map, nmap, filetype, on, off, autocmd, call, colorscheme},
+  morecomment=[f]{"}, % l is for line comment
+  morestring=[b]' % defines that strings are enclosed in double quotes
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -97,7 +104,7 @@ stringstyle=\itshape\color{Green4},
 
 \section{Basic}
 \subsection{vimrc}
-\lstinputlisting{../codes/Basic/vimrc}
+\lstinputlisting[language=vim]{../codes/Basic/vimrc}
 
 \subsection{Default Code}
 \lstinputlisting{../codes/Basic/default.cpp}
